@@ -1,0 +1,84 @@
+
+
+%----------------------------------------------------------------
+
+\documentclass[12pt,oneside]{book} % "oneside" per stampa solo fronte
+\usepackage[a4paper, top=3cm, bottom=2.5cm, inner=3.5cm, outer=2.5cm]{geometry}	% you can change font size to 12 point also
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\marginparwidth}{2cm}
+\input{packages}	% insert packages and settings
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------------------------------------------------------------
+%				 		include preliminary pages 
+%----------------------------------------------------------------
+
+\frontmatter		% use roman page numbering for preliminary pages
+
+% The cover page is given saparately as the margins for that page are different.
+\input{Preliminary_pages/0_front_page}
+% \input{Preliminary_pages/1_copyright}
+% \input{Preliminary_pages/2_dedication}
+% \input{Preliminary_pages/3_declaration}
+% \input{Preliminary_pages/4_acknowledgment}
+% \input{Preliminary_pages/5_certificate}
+% \input{Preliminary_pages/6_lay_summary}
+%\input{Preliminary_pages/7_abstract}
+% \input{Preliminary_pages/8_publications}
+
+%-------------------------per inserire agine bianche----------------------
+% \newpage
+% \thispagestyle{empty}
+% \null
+% \newpage
+%-------------------------------------------------------------------------
+
+\tableofcontents	% add table of contents
+%\listoffigures		% add list of figures
+% \listoftables		% add table of tables
+% \printnomenclature	% add list of symbols
+
+%----------------------------------------------------------------
+%				 		include chapters 
+%----------------------------------------------------------------
+
+\mainmatter 		% use numeric page numbering for chapters
+
+\input{Chapters/Ch1_introduction}
+\input{Chapters/Ch2_scalar-tensor_theory}
+\input{Chapters/Ch3_Ernst_Conformal_gravity}
+\input{Chapters/Ch4_Conformal_symmetries}
+\input{Chapters/Ch5_applications}
+\input{Chapters/Ch6_new_solutions}
+\input{Chapters/Ch7_conclusion}
+
+
+
+%----------------------------------------------------------------
+%				 		add appendix
+%----------------------------------------------------------------
+
+\appendix
+\appendixchapterformat   % Applica il nuovo formato per le appendici
+\input{Post_pages/appendix_A}  % Carica il file dell'appendice
+\input{Post_pages/appendix_b}
+\input{Post_pages/appendix_c}
+
+
+%----------------------------------------------------------------
+%				 		add references 
+%----------------------------------------------------------------
+
+\renewcommand{\bibname}{References}		% changes default name Bibliography to References
+
+\bibliographystyle{unsrtnat}				% define reference style
+\bibliography{References/references}	% call the .bib file for references
+
+
+
+
+\end{document}

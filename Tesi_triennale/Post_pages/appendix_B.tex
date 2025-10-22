@@ -1,0 +1,58 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%% appendix %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Recover a traversable wormhole} \label{appendice B}
+Another interesting test that we can do on the solution generating technique, is applying transformation VI to BBMB black hole. As mentioned, this symmetry is the shift transformation on the scalar field, $\hat{\psi} \rightarrow \hat{\psi}+a$, of MC frame mapped by Bekenstein's map (\ref{mappa bekenstein}). In \citep{stationary} this symmetry is applied at BBMB black hole, to obtain the solution founded in \citep{Barcelo_Visser}, interpreted as a traversable wormhole. Here we recover the same result by applying directly transformation VI of the CC frame.
+
+\section{The transformation}
+Since the seed solution is the BBMB black hole (\ref{BBMB metrics}), we start again with the change of coordinates (\ref{cambio cilindriche sferiche}) of section \ref{sezione bbmb+nut} and with the same definitions for $f$, $\omega$, $\Omega$, $\gamma$ and in particular $\chi$ that is 
+\begin{equation}
+    \chi =4\pi\psi^2-3= 3r\frac{2m-r}{(r-m)^2}
+    \notag
+\end{equation}
+so that the transformation VI, that involves only the scalar field, becomes
+\begin{equation}
+    \chi \rightarrow \chi' = 3\left(\tanh^2\left[a \pm \operatorname{arctanh} \left[ \frac{m}{r-m}\right]\right] - 1\right) \notag
+\end{equation}
+or equivalently
+\begin{equation}
+    \psi \rightarrow \psi' = \sqrt{\frac{6}{k}}\tanh\left[a \pm \operatorname{arctanh} \left[ \frac{m}{r-m}\right]\right]
+    \label{psi nel wormhole}
+\end{equation}
+with $a\in\mathbb{R}$. Now defining a new parameter $s$ such that $a=\log[\sqrt{s}]$
+and recalling the property of the function $\tanh$
+\begin{equation}
+    \tanh[x+y] = \frac{\tanh[x]+\tanh[y]}{1+\tanh[x]\tanh[y]} \notag
+\end{equation}
+we can rewrite $\psi'$ as 
+\begin{equation}
+    \psi' = \sqrt{\frac{6}{k}}\frac{(r-m)(s-1)\pm m(s+1))}{(r-m)(s+1)\pm m(s-1))}.
+\end{equation}
+The choice of the shift's sign in transformation VI identify two solutions, one with a scalar field $\psi'_+$ and the other with $\psi'_-$
+\begin{equation}
+    \psi'_+ = \sqrt{\frac{6}{k}}\frac{r(s-1)- 2ms}{r(s+1)- 2ms}
+\end{equation}
+\begin{equation}
+    \psi'_- = \sqrt{\frac{6}{k}}\frac{r(s-1)+ 2m}{r(s+1)- 2m}
+\end{equation}
+
+\section{The solutions}
+Remembering that $\Omega=1$ for BBMB metric and $\alpha=\alpha'$ ($\Omega'\chi'=\Omega\chi$) in transformation VI we have to impose 
+\begin{equation}
+   \Omega' = \frac{\chi}{\chi'} = \frac{1-\frac{k}{6}\psi^2}{1-\frac{k}{6}\psi'^2}.
+   \notag
+\end{equation}
+Finally we remain with two transformed versions of the Bekenstein's solutions, the first 
+\begin{align}
+  ds^2_+ & = \frac{(r(s+1)- 2ms)^2}{4s(r-m)^2}ds_{0}^2 & \psi_+' &= \sqrt{\frac{6}{k}}\frac{r(s-1)- 2ms}{r(s+1)- 2ms}
+  \label{wormhole metric +}
+\end{align}
+that is exactly the traversable wormhole in the form proposed in \citep{stationary} and the second
+\begin{align}
+  ds^2_- & = \frac{(r(s+1)- 2m)^2}{4s(r-m)^2}ds_{0}^2 & \psi_-' &= \sqrt{\frac{6}{k}}\frac{r(s-1)+ 2m}{r(s+1)- 2m}
+  \label{wormhole metric -}
+\end{align}
+Obviously in both cases, we can recover the standard BBMB solution in the limit $s\rightarrow 1$.
+
+

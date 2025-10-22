@@ -1,0 +1,246 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% methods %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\chapter{Ernst's technique in the conformal frame} \label{solution generating technique}
+\thispagestyle{empty}
+
+%-----------------------------------------------------------------------------%
+In 1968 F. J. Ernst proposed \citep{ernst1} an extremely elegant method to treat stationary and axisymmetric gravitational field problems. He found that, in terms of the LWP metric, Einstein's equations for the two coupled fields $f,\omega$ can be rewritten in a single equation, named Ernst's equation, of a complex field $\mathcal{E}$, named Ernst's potential. The power of this approach emerges looking at the symmetries of Ernst's equation, not present in the standard ones, that, sometimes, leads to a completely new physical insight. In \citep{ernst2} it is shown how to extend this method with the presence of an electromagnetic field.   
+
+An interesting question arises regarding the potential extension of Ernst's method to Scalar-Tensor theories. Specifically, whether Ernst's equation in the conformal frame retains the same symmetries and if this coupling uncovers new ones. Due to the minimal coupling of the scalar field, Ernst's method remains unchanged in the MC frame. Then, as discussed in section \ref{Mapping MC and CC frames}, the most natural approach to this problem might be applying the existing symmetries to a solution in the MC frame and then using Bekenstein's map (\ref{mappa bekenstein}) to map them into conformal frame.
+
+Since this is the standard procedure, a different approach will be presented here. We show how to extend Ernst's method directly in the CC frame, without relying to Bekenstein's map. The theory (\ref{Azione G.R conforme}) defined by the equations of motion (\ref{Equazioni G.R conforme scariche})-(\ref{K.G. conforme}) will be used. The aim of this chapter is to produce an effective action used in chapter \ref{Symmetries of CC Ernst's equations} to study the correlated symmetries. 
+
+
+%------------------------------------------------------------
+\section{Ernst's technique in the CC frame}
+\subsection{Conformal LWP ansatz}
+First of all, we need to define a stationary and axisymmetric ansatz in a cylindrical coordinates system $\{-t,\rho,\varphi,z\}$.
+We identify a spacetime as stationary if it presents a timelike Killing vector $\xi_{\mu}$ whose orbits are complete, while it is said to be axisymmetric if the Killing vector is spacelike with closed orbits. The simplest choice for a spacetime with this properties that we can use in the conformal frame is the Lewis-Weyl-Papapetrou (LWP) ansatz multiplied by a conformal factor $\Omega$
+\begin{equation}
+        ds^2 = \Omega\left(-f(dt - \omega d\varphi)^2 + f^{-1}\left[ \rho^2 d\varphi^2 + e^{2\gamma}(d\rho^2+dz^2)\right] \right).
+        \label{ansatz_wlp}
+\end{equation}
+We use this metric because it closely resembles the original LWP ansatz employed by Ernst and, since we expect to identify some symmetries that can be mapped onto those of MC frame \citep{embedding}, this ansatz should make it easier to identify them. A complete derivation of LWP metric can be found in \citep{Illy}-\citep{Martelli}. Notice that thanks to the symmetries specified, all functions depend only on $\rho, z$. A reasonable alternative to treat this kind of spacetimes in the conformal frame, is removing the $\Omega$ factor and substitute the $\rho^2 d\varphi^2$ term with a generic function $\alpha(\rho, z)d\varphi^2$. In appendix \ref{appendice A} we repeat the same procedure for Ernst's method with a completely different ansatz.
+
+\subsection{Deriving Ernst's equation}
+In terms of metric (\ref{ansatz_wlp}), the five unknown fields $f,\Omega,\gamma, \omega, \psi$ are described by four Einstein's equations (EE) and equation (\ref{K.G. conforme}) (that is a ``Klein-Gordon'' equation (K.G.))
+\begin{equation}
+        \nabla\cdot \left[\rho^{-2}f^2\Omega\chi\nabla \omega \right] = 0\tag{$EE^{\varphi}_t$}
+\end{equation}
+\begin{equation}
+    \nabla \cdot[\rho\nabla(\Omega\chi)]=0 \tag{$EE^{\rho}_{\rho}+EE^{z}_{z}$}
+\end{equation}
+\begin{equation}
+    \frac{f}{\Omega\chi}\left[\nabla\cdot(\Omega\chi\nabla f) + f\nabla^2(\Omega\chi)\right] = \nabla f^2 - \rho^{-2}f^4\nabla\omega^2 \tag{$EE^t_t- EE^{\varphi}_{\varphi}$}
+\end{equation}
+\begin{align}
+    \partial_{\rho}^2\gamma + \partial_z^2\gamma = \frac{3}{4}\left(\frac{\nabla\Omega^2}{\Omega^2} + \frac{\nabla\chi^2}{\chi(\chi + 3)} -\frac{\nabla^2\chi}{\chi} \right. 
+    & \left. - \frac{\nabla^2\Omega}{\Omega} - \frac{\nabla^2(\Omega\chi)}{\Omega\chi} - f^{-2}\nabla f^2 \right) \notag \\
+    & + \frac{1}{4}\rho^{-2}f^2\nabla\omega^2 + \frac{1}{2}f^{-1}\nabla^2f \tag{$EE^t_t + EE^{\varphi}_{\varphi}$}
+\end{align}
+\begin{align}
+    12\psi^{-1}\Omega^{-1}\nabla\cdot(\Omega\nabla\psi)-3\frac{\nabla\Omega^2}{\Omega^2} + 6\frac{\nabla^2\Omega}{\Omega}+ &3f^{-2}\nabla f^2 - \rho^{-2}f^2\nabla\omega^2 \notag \\ 
+    & -2f^{-1}\nabla^2f + 4(\partial_{\rho}^2\gamma + \partial_z^2\gamma) = 0 \tag{K.G.}
+\end{align}
+where $\chi \equiv 4\pi \psi^2 -3$ and $\nabla \cdot$, $\nabla^2$ are the flat cylindrical operators.
+Now the purpose is to rewrite this five equations with Ernst's potential and then find the associated effective action. Following step by step Ernst procedure, we notice that if a function $h$ is independent from $\varphi$ and if $\hat{e}_{\varphi}$ is the unit vector in azimuthal direction, the following equations hold
+\begin{equation}
+    \nabla\cdot[\rho^{-1}\hat{e}_{\varphi} \times \nabla h]=0
+    \label{proprietà azimutale}
+\end{equation}
+\begin{equation}
+    \hat{e}_{\varphi} \times (\hat{e}_{\varphi} \times \nabla h) = -\nabla h \notag
+\end{equation}
+\begin{equation}
+    (\hat{e}_{\varphi} \times \nabla h)^2 = \nabla h^2. \notag
+\end{equation}
+From this it is natural to regard $EE^{\varphi}_t$ as an integrability condition for the existence of $h$ 
+\begin{equation}
+    \rho^{-1}\hat{e}_{\varphi} \times \nabla h = \rho^{-2}f^2\Omega\chi \nabla\omega 
+    \label{definizione_h_WLP}
+\end{equation}
+that satisfies 
+\begin{equation}
+    \nabla\cdot\left[(f^2\Omega\chi)^{-1}\nabla h \right] = 0
+    \label{divergenza_h_WLP}
+\end{equation}
+equivalent to $EE^{\varphi}_t$, and taking the square of (\ref{definizione_h_WLP})
+\begin{equation}
+    \nabla\omega^2 = \rho^2f^{-4}(\Omega\chi)^{-2}\nabla h^2.
+    \label{h_due_WLP}
+\end{equation}
+At this point, with (\ref{h_due_WLP}) and defining $\Tilde{f} \equiv \Omega\chi f$, the $EE^t_t- EE^{\varphi}_{\varphi}$ becomes 
+\begin{equation}
+        \frac{\Tilde{f}}{\Omega\chi}\nabla\cdot[\Omega\chi\nabla\Tilde{f}]=\nabla\Tilde{f}^2-\nabla h^2
+        \label{ernst_WLP_con_f_esplicito}
+\end{equation}
+ therefore it is natural to define the Ernst's potential $\mathcal{E} \equiv \Tilde{f}+ ih$ so that equations (\ref{ernst_WLP_con_f_esplicito}) and (\ref{divergenza_h_WLP}) (equivalent to  $EE^t_t- EE^{\varphi}_{\varphi}$ and $EE^{\varphi}_t$) can be viewed as the real and the imaginary part of a single complex equation, the Ernst's equation
+\begin{equation}
+    \mathrm{Re}\mathcal{E}\nabla(\alpha\nabla\mathcal{E})=\alpha\nabla\mathcal{E}\nabla\mathcal{E}
+    \label{Ernst_CC_WLP}
+\end{equation}
+where $\alpha \equiv \Omega\chi$. Once Ernst's potential has been defined and with the substitutions $\Omega\chi \rightarrow \alpha$, $\nabla\omega^2 \rightarrow \nabla h^2$, $\alpha f\rightarrow \Tilde{f}$, the  $EE^t_t+ EE^{\varphi}_{\varphi}$ and $EE^{\rho}_{\rho}+EE^{z}_{z}$ take the form
+\begin{equation}
+    \partial^2_{\rho}\gamma + \partial^2_z \gamma = -\frac{9 \nabla\chi ^2}{4\chi^2(\chi+3)} - 2\frac{\nabla^2\alpha}{\alpha} - \frac{\nabla\mathcal{E}\nabla\mathcal{E}^*}{(\mathcal{E} + \mathcal{E}^*)^2} + \frac{\nabla \alpha ^2}{\alpha^2}
+    \label{equazione_per_gamma_ernst_WLP}
+\end{equation}
+\begin{equation}
+    \nabla\cdot[\rho\nabla\alpha]=0
+    \label{equazione_alpha_WLP}
+\end{equation}
+and replacing (\ref{equazione_per_gamma_ernst_WLP}) in the last term of K.G. 
+\begin{equation}
+    6\nabla\cdot(\alpha\nabla\chi) - \frac{9\alpha(\chi +2)}{\chi(\chi + 3)}\nabla\chi^2 = 0.
+    \label{K.G._ernst_WLP}
+\end{equation}
+\subsection{Effective action}
+Finally is straightforward to demonstrate that the four equations of motion (\ref{Ernst_CC_WLP})-(\ref{K.G._ernst_WLP}) can be derived from the following effective action
+\begin{align}
+        S = \int \rho d\rho dz \left[-\frac{3\alpha\nabla\chi^2}{\chi^2(\chi+3)}+ \frac{4}{3} \left(\frac{\nabla\alpha^2}{\alpha} -\alpha\frac{\nabla\mathcal{E}\nabla\mathcal{E}^*}{(\mathcal{E} + \mathcal{E}^*)^2} - \alpha(\partial^2_{\rho}\gamma + \partial^2_z \gamma) \right) \right]
+        \label{azione_effettiva_WLP_con_derivate_seconde}
+\end{align}
+or equivalently without the second-order derivative term 
+\begin{align}
+        S = \int \rho d\rho dz \left[-\frac{3\alpha\nabla\chi^2}{\chi^2(\chi+3)}+ \frac{4}{3} \left(\frac{\nabla\alpha^2}{\alpha} -\alpha\frac{\nabla\mathcal{E}\nabla\mathcal{E}^*}{(\mathcal{E} + \mathcal{E}^*)^2} +\nabla\alpha\nabla\gamma + \alpha\frac{\nabla\gamma\nabla\rho}{\rho} \right)\right].
+        \label{azione_effettiva_WLP_con_derivate_prime}
+\end{align}
+In particular if $\mathcal{L}$ is the term between brackets in the above action, it's easy to verify that
+\begin{align}
+    &\nabla \frac{\delta\mathcal{L}}{\delta\nabla\mathcal{E}} - \frac{\delta\mathcal{L}}{\delta\mathcal{E}} =0 \longrightarrow (\ref{Ernst_CC_WLP}) \notag \\
+    &\nabla \frac{\delta\mathcal{L}}{\delta\nabla\chi} - \frac{\delta\mathcal{L}}{\delta\chi} =0 \longrightarrow (\ref{K.G._ernst_WLP}) \notag \\
+    &\nabla \frac{\delta\mathcal{L}}{\delta\nabla\gamma} - \frac{\delta\mathcal{L}}{\delta\gamma} =0 \longrightarrow (\ref{equazione_alpha_WLP}) \notag \\
+    &\nabla \frac{\delta\mathcal{L}}{\delta\nabla\alpha} - \frac{\delta\mathcal{L}}{\delta\alpha} =0 \longrightarrow (\ref{equazione_per_gamma_ernst_WLP}) \notag
+\end{align}
+
+\section{The electromagnetic case} \label{tecnica con elettromagnetismo}
+To complete the discussion let's consider Ernst's technique within a scalar-tensor theory that incorporates Maxwell's electromagnetism. The theory is defined below, where we simply introduce the electromagnetic Lagrangian density in the action (\ref{Azione G.R conforme})
+\begin{equation}
+    S[g_{\mu \nu}, \psi, F_{\mu \nu}] = \frac{1}{16\pi} \int d^4x \sqrt{-g} \left[ R - k\left( \nabla^{\mu}\psi \nabla_{\mu}\psi  + \frac{R}{6}\psi^2\right) -F^{\mu\nu}F_{\mu\nu}\right].
+    \label{Azione G.R conforme elettromagnetica}
+\end{equation}
+This leads to the following equations of motion
+\begin{align}
+    &G_{\mu \nu} = 2T^{F}_{\mu \nu}+ kT^{\psi}_{\mu \nu}\notag\\
+    &\Box \psi -\frac{R}{6}\psi= 0 \\
+    & \partial_{\mu}(\sqrt{-g}F^{\mu \nu})=\nabla_{\mu}F^{\mu \nu}=0\notag\\\notag
+    \label{equazioni GR conforme cariche}
+\end{align}
+where $T^{\psi}_{\mu \nu}$ is the right-hand side of equation (\ref{Equazioni G.R conforme scariche}), while $T^F_{\mu \nu}$ is
+\begin{equation}
+    T^F_{\mu \nu} = F_{\mu\rho}F^{\rho}_{\nu}-\frac{1}{4}g_{\mu \nu}F_{\rho\sigma}F^{\rho\sigma}.
+\end{equation}
+In this case as well, we will use the conformal LWP ansatz (\ref{ansatz_wlp}) with a four-potential defined as $A=A_0(\rho,z) dt + A_3(\rho,z) d\varphi$, so that it satisfies symmetry conditions (and obviously $F_{\mu \nu}= \partial_{\mu}A_{\nu}-\partial_{\nu}A_{\mu}$). This time, there are seven unknown fields $A_0, A_3, f, \omega, \gamma, \Omega, \psi$ described respectively by two Maxwell's equations (ME), four Einstein's equations and a Kleing-Gordon equation
+\begin{equation}
+    \nabla\cdot[\rho^{-2}f(\nabla A_3-\omega\nabla A_0)]=0 \tag{$ME_{\varphi}$}
+\end{equation}
+\begin{equation}
+    \nabla\cdot[f^{-1}\nabla A_0 + \rho^{-2}f\omega(\nabla A_3-\omega\nabla A_0)]=0 \tag{$ME_{t}$}
+\end{equation}
+\begin{equation}
+        \nabla\cdot \left[\rho^{-2}f^2\Omega\chi\nabla \omega +12f\rho^{-2}A_0(\nabla A_3-\omega\nabla A_0) \right] = 0\tag{$EE^{\varphi}_t$}
+\end{equation}
+\begin{equation}
+    \nabla \cdot[\rho\nabla(\Omega\chi)]=0 \tag{$EE^{\rho}_{\rho}+EE^{z}_{z}$}
+\end{equation}
+\begin{align}
+    \frac{f}{\Omega\chi}\left[\nabla\cdot(\Omega\chi\nabla f) + f\nabla^2(\Omega\chi)\right] = &\nabla f^2 - \rho^{-2}f^4\nabla\omega^2 \notag \\& -6(\Omega\chi)^{-1}f[(\rho^{-2}f^2(\nabla A_3^2-\omega^2\nabla A_0^2)+\nabla A_0^2] \tag{$EE^t_t- EE^{\varphi}_{\varphi}$}
+\end{align}
+\begin{align}
+    \partial_{\rho}^2\gamma + \partial_z^2\gamma = \frac{3}{4}\left(\frac{\nabla\Omega^2}{\Omega^2} + \frac{\nabla\chi^2}{\chi(\chi + 3)} -\frac{\nabla^2\chi}{\chi} \right. 
+    & \left. - \frac{\nabla^2\Omega}{\Omega} - \frac{\nabla^2(\Omega\chi)}{\Omega\chi} - f^{-2}\nabla f^2 \right) \notag \\
+    & + \frac{1}{4}\rho^{-2}f^2\nabla\omega^2 + \frac{1}{2}f^{-1}\nabla^2f \tag{$EE^t_t + EE^{\varphi}_{\varphi}$}
+\end{align}
+\begin{align}
+    12\psi^{-1}\Omega^{-1}\nabla\cdot(\Omega\nabla\psi)-3\frac{\nabla\Omega^2}{\Omega^2} + 6\frac{\nabla^2\Omega}{\Omega}+ &3f^{-2}\nabla f^2 - \rho^{-2}f^2\nabla\omega^2 \notag \\ 
+    & -2f^{-1}\nabla^2f + 4(\partial_{\rho}^2\gamma + \partial_z^2\gamma) = 0. \tag{K.G.}
+\end{align}
+As done in the previous section, our starting point to build Ernst's potential is looking at which of this seven equations represent an integrability condition. The first one is the equation $ME_{\varphi}$ that, with property (\ref{proprietà azimutale}), we can use to define a field $\Tilde{A}_3$ independent on $\varphi$
+\begin{equation}
+    \rho^{-1}\hat{e}_{\varphi} \times \nabla \Tilde{A}_3 = \rho^{-2}f(\nabla A_3 - \omega \nabla A_0)
+    \label{definizione A_3 tilde}
+\end{equation}
+such that
+\begin{equation}
+    \nabla\cdot[f^{-1}\nabla \tilde{A}_3-\rho^{-1}\omega\hat{e}_{\varphi} \times \nabla A_0]=0 
+    \label{condizione per phi 1}
+\end{equation}
+and using definition (\ref{definizione A_3 tilde}) in $ME_t$ 
+\begin{equation}
+    \nabla\cdot[f^{-1}\nabla A_0+\rho^{-1}\omega\hat{e}_{\varphi} \times \nabla \tilde{A}_3]=0.
+    \label{condizione per phi 2}
+\end{equation}
+Defining a new complex field as $\boldsymbol{\Phi} \equiv A_0 + i \tilde{A}_3$ equations (\ref{condizione per phi 1}) and (\ref{condizione per phi 2}) can be viewed as the imaginary and the real part of a single complex equation 
+\begin{equation}
+    \nabla\cdot[f^{-1}\nabla \boldsymbol{\Phi} - i\rho^{-1}\omega\hat{e}_{\varphi} \times \nabla \boldsymbol{\Phi}]=0.
+    \label{single complex equation}
+\end{equation}
+With the new fields $\tilde{A}_3$ and $\tilde{f}\equiv \Omega\chi f$ the $EE^{\varphi}_t$ can be rewritten as 
+\begin{equation}
+    \nabla \cdot [(\Omega\chi)^{-1}\tilde{f}^2\rho^{-2}\nabla\omega+6\rho^{-1}\hat{e}_{\varphi} \times \mathrm{Im}(\boldsymbol{\Phi}^*\nabla \boldsymbol{\Phi})]= 0
+\end{equation}
+and this last equation is the second integrability condition for the existence of a field h 
+\begin{equation}
+    \rho^{-1}\hat{e}_{\varphi} \times \nabla h = (\Omega\chi)^{-1}\tilde{f}^2\rho^{-2}\nabla\omega+6\rho^{-1}\hat{e}_{\varphi} \times \mathrm{Im}(\boldsymbol{\Phi}^*\nabla \boldsymbol{\Phi})
+    \label{definizione h elettro}
+\end{equation}
+such that
+\begin{equation}
+    \nabla \cdot [\Omega\chi\tilde{f}^{-2}(\nabla h -6\mathrm{Im}(\boldsymbol{\Phi}^*\nabla \boldsymbol{\Phi}))]= 0
+    \label{condizione 1 per epsilon}
+\end{equation}
+\begin{equation}
+    \nabla \omega^2= (\Omega\chi)^2\rho^2\tilde{f}^{-4}(\nabla h -6\mathrm{Im}(\boldsymbol{\Phi}^*\nabla \boldsymbol{\Phi}))^2.
+\end{equation}
+Finally we have to recast equation $EE^t_t- EE^{\varphi}_{\varphi}$ with $h$ and the new potential $\boldsymbol{\Phi}$, obtaining
+\begin{equation}
+    \frac{\tilde{f}}{\Omega\chi}\nabla\cdot (\Omega\chi\nabla \tilde{f})=\nabla\tilde{f}^2-(\nabla h -6\mathrm{Im}(\boldsymbol{\Phi}^*\nabla \boldsymbol{\Phi}))^2 -6\tilde{f}\nabla\boldsymbol{\Phi}\nabla\boldsymbol{\Phi}^*
+    \label{condizione 2 per epsilon}
+\end{equation}
+so that with the definition $\mathcal{E}\equiv\tilde{f}+3|\boldsymbol{\Phi}|^2+ih$, equations (\ref{condizione 1 per epsilon}) and (\ref{condizione 2 per epsilon}) are the imaginary and real part of the equation (\ref{equazione ernst carica 1}), while equation (\ref{single complex equation}) yields the (\ref{equazione ernst carica 2}).
+
+where $\alpha\equiv\Omega\chi$, that are the Ernst's equations for the electromagnetic case. The last step before finding an effective action of the theory is writing $EE^t_t+ EE^{\varphi}_{\varphi}$ and $EE^{\rho}_{\rho}+EE^{z}_{z}$ in terms of the Ernst's potential, simply replacing $f$, $\omega$, $\Omega\chi$ with $\mathcal{E}$, $\alpha$
+\begin{align}
+    \partial^2_{\rho}\gamma + \partial^2_z \gamma =\frac{\nabla \alpha ^2}{\alpha^2} - 2\frac{\nabla^2\alpha}{\alpha} - \frac{|\nabla\mathcal{E}-6\boldsymbol{\Phi}^*\nabla\boldsymbol{\Phi}|^2}{(\mathcal{E} + \mathcal{E}^*-6|\boldsymbol{\Phi}|^2)^2} -6\frac{\nabla\boldsymbol{\Phi}\nabla\boldsymbol{\Phi}^*}{\mathcal{E} + \mathcal{E}^*-6|\boldsymbol{\Phi}|^2} -\frac{9 \nabla\chi ^2}{4\chi^2(\chi+3)} 
+    \label{equazione_per_gamma_ernst_WLP_carico}
+\end{align}
+% (\nabla\mathcal{E}-6\boldsymbol{\Phi}^*\nabla\boldsymbol{\Phi})(\nabla\mathcal{E}^*-6\boldsymbol{\Phi}\nabla\boldsymbol{\Phi}^*)
+\begin{equation}
+    \nabla\cdot[\rho\nabla\alpha]=0
+    \label{equazione_alpha_WLP_carico}
+\end{equation}
+and replacing (\ref{equazione_per_gamma_ernst_WLP_carico}) in the last term of K.G. 
+\begin{equation}
+    6\nabla\cdot(\alpha\nabla\chi) - \frac{9\alpha(\chi +2)}{\chi(\chi + 3)}\nabla\chi^2 = 0.
+    \label{K.G._ernst_WLP_carico}
+\end{equation}
+Looking at the effective action (\ref{azione_effettiva_WLP_con_derivate_prime}) of the uncharged theory, the Lagrangian density can be split in two contributes (\ref{lagrangiana Ernst scarica})-(\ref{lagrangiana del resto}), the first $\mathcal{L}_{\mathcal{E}}$ that generates Ernst's equation and the second $\mathcal{L}_{\alpha \chi \gamma}$ for the remaining ones.
+\begin{equation}
+    \mathcal{L}_{\mathcal{E}} = \alpha\frac{\nabla\mathcal{E}\nabla\mathcal{E}^*}{(\mathcal{E} + \mathcal{E}^*)^2} 
+    \label{lagrangiana Ernst scarica}
+\end{equation}
+\begin{equation}
+    \mathcal{L}_{\alpha \chi \gamma} = \frac{9\alpha\nabla\chi^2}{4\chi^2(\chi+3)} -\frac{\nabla\alpha^2}{\alpha} -\nabla\alpha\nabla\gamma - \alpha\frac{\nabla\gamma\nabla\rho}{\rho}
+    \label{lagrangiana del resto}
+\end{equation}
+With the presence of electromagnetic field, $\mathcal{L}_{\alpha\chi\gamma}$ is unchanged while $\mathcal{L}_{\mathcal{E}}$ takes the form
+\begin{equation}
+    \mathcal{L}_{\mathcal{E}\boldsymbol{\Phi}} = \alpha\frac{(\nabla\mathcal{E}-6\boldsymbol{\Phi}^*\nabla\boldsymbol{\Phi})\cdot(\nabla\mathcal{E}^*-6\boldsymbol{\Phi}\nabla\boldsymbol{\Phi}^*)}{(\mathcal{E} + \mathcal{E}^*-6|\boldsymbol{\Phi}|^2)^2} +6\alpha\frac{\nabla\boldsymbol{\Phi}\nabla\boldsymbol{\Phi}^*}{\mathcal{E} + \mathcal{E}^*-6|\boldsymbol{\Phi}|^2} 
+    \label{lagrangiana Ernst carica}
+\end{equation}
+so the complete effective action of the theory reads as\footnote{Obviously in the limit of null scalar field $\psi\rightarrow0$ (and then $\alpha\rightarrow-3$, $\mathcal{E}\rightarrow-3\mathcal{E}_{GR}$) we recover the action that generates Ernst's equations of classical GR.} 
+\begin{align}
+        S = \int \rho d\rho dz \left[\mathcal{L}_{\mathcal{E}\boldsymbol{\Phi}} + \mathcal{L}_{\alpha\chi\gamma}\right]
+        \label{azione_effettiva_WLP_con_derivate_prime_carica}.
+\end{align}
+%-----------------------------------------------------------------------------%
+
+
+
+
+
+
+
